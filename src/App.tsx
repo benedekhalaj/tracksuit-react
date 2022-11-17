@@ -7,8 +7,9 @@ import 'swiper/css/pagination';
 import CardsByCategory from "./components/cards_by_category/CardsByCategory";
 import PlayerService from "./services/PlayerService";
 import CategoryService from "./services/CategoryService";
+import {FunctionComponent} from "react";
 
-function App() {
+const App: FunctionComponent = () => {
 
     const categories = CategoryService.getCategories();
     const players = PlayerService.getPlayers();
