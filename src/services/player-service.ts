@@ -6,6 +6,14 @@ const getPlayers = async (): Promise<PlayerModel[]> => {
     return await generalService.getFetch(url);
 }
 
+const createPlayer = async (playerModel: PlayerModel): Promise<PlayerModel> => {
+    const url: string = "http://localhost:8080/api/v0/players";
+    return await generalService.postFetch(url, {
+        name: playerModel.name,
+        appUserId: playerModel.appUser.id
+    });
+}
+
 const deletePlayer = async (id: number) => {
     const url: string = `http://localhost:8080/api/v0/players/${id}`
     await generalService.deleteFetch(url);
@@ -13,6 +21,7 @@ const deletePlayer = async (id: number) => {
 
 const methods = {
     getPlayers: getPlayers,
+    createPlayer: createPlayer,
     deletePlayer: deletePlayer
 };
 
