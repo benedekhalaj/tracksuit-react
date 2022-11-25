@@ -15,11 +15,9 @@ interface Props {
 
 const CardsByCategory: FunctionComponent<Props> = (props) => {
 
-    const swiperPadding = (isBrowser) ? "5% 5%" : "2% 2% 15%";
-
     return (
         <Swiper
-    style={{backgroundColor: "lightblue", padding: swiperPadding, userSelect: "none", borderRadius: "8px"}}
+    style={{backgroundColor: "lightblue", userSelect: "none", borderRadius: "8px"}}
     modules={[Pagination, Navigation]}
     pagination={{clickable: true}}
     navigation
@@ -27,7 +25,7 @@ const CardsByCategory: FunctionComponent<Props> = (props) => {
     spaceBetween={20}
         >
             {props.categories.map((category, index) =>
-                <SwiperSlide><CategoryCard key={category + index} title={category} players={props.players}/></SwiperSlide>)
+                <SwiperSlide key={"SwiperSlide" + index}><CategoryCard title={category} players={props.players}/></SwiperSlide>)
             };
 
         </Swiper>
