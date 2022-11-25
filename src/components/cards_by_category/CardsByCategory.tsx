@@ -7,10 +7,11 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import {FunctionComponent} from "react";
+import PlayerModel from "../../interfaces/player-model";
 
 interface Props {
     categories: string[],
-    players: string[]
+    players: PlayerModel[]
 }
 
 const CardsByCategory: FunctionComponent<Props> = (props) => {
