@@ -12,10 +12,7 @@ const Scores: FunctionComponent = () => {
     const [matchScore, setMatchScore] = useState<MatchScore>({matchName: "", playerScores: []});
 
     useEffect(() => {
-        scoreService.getScores().then(scores => {
-            console.log(scores);
-            setMatchScore(scores);
-        });
+        scoreService.getScores().then(scores => setMatchScore(scores));
     }, [setMatchScore]);
 
     return (
