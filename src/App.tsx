@@ -11,6 +11,7 @@ import CategoryService from "./services/category-service";
 import PlayerService from "./services/player-service";
 import Players from "./components/players/Players";
 import PlayerModel from "./interfaces/player-model";
+import Matches from "./components/matches/matches";
 
 const App: FunctionComponent = () => {
 
@@ -26,6 +27,7 @@ const App: FunctionComponent = () => {
         <Container style={{backgroundColor: "whitesmoke", padding: "25px"}}>
             <h1>TrackSuit</h1>
             <CssBaseline/>
+            <Matches></Matches>
             <Players></Players>
             <CardsByCategory categories={categories} players={players}></CardsByCategory>
             <Scores></Scores>
