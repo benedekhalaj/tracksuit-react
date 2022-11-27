@@ -3,7 +3,6 @@ import PlayerModel from "../../interfaces/player-model";
 import playerService from "../../services/player-service";
 import Player from "../player/Player";
 import {Button} from "@mui/material";
-import player from "../player/Player";
 
 const Players: FunctionComponent = () => {
     const [players, setPlayers] = useState<PlayerModel[]>([]);
