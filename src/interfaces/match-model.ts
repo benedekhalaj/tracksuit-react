@@ -1,8 +1,8 @@
-import Game from "./game";
+import GameModel from "./game-model";
 
 interface MatchModel {
     id: number,
-    game: Game,
+    game: GameModel,
     name: string
 }
 
