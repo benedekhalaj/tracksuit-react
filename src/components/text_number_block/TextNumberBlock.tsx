@@ -8,26 +8,14 @@ interface Props {
 
 const TextNumberBlock: FunctionComponent<Props> = (props) => {
 
-    const inputStyles = {
-        width: "100%",
-        height: "35px",
-        padding: "6px",
-        borderRadius: "8px",
-        border: "1px lightgray solid",
-        font: "inherit"
-    };
-
     return (
-        <Card style={{
-            borderRadius: "8px"
-        }}>
-            <Grid2 container spacing={2} padding={"1%"} lineHeight={"0%"}>
+        <Card>
+            <Grid2 container>
                 <Grid2 xs={8}>
-                    <p style={{fontWeight: "bold"}}>{props.text}</p>
+                    <p>{props.text}</p>
                 </Grid2>
                 <Grid2 xs={4}>
                     <input
-                        style={inputStyles}
                         type={"number"}
                         placeholder={"points"}
                         defaultValue={0}
